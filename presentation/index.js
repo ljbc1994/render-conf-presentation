@@ -13,9 +13,11 @@ import {
   Slide,
   Text
 } from "spectacle";
+import { maxSlideStyle } from "./config/slide-styles";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import presentationTheme from "./config/theme";
 
 // Import Slides
 import { IntroductionSlide } from "./slides";
@@ -23,21 +25,16 @@ import { IntroductionSlide } from "./slides";
 // Require CSS
 require("normalize.css");
 
-const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quarternary: "#CECECE"
-}, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
-});
+const theme = createTheme(
+  presentationTheme.colors,
+  presentationTheme.fonts
+);
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary" className={maxSlideStyle}>
           <IntroductionSlide />
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
