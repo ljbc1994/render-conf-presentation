@@ -20,7 +20,7 @@ import createTheme from "spectacle/lib/themes/default";
 import presentationTheme from "./config/theme";
 
 // Import Slides
-import { IntroductionSlide } from "./slides";
+import { IntroductionSlide, DataVisualisationSlide } from "./slides";
 
 // Require CSS
 require("normalize.css");
@@ -33,18 +33,12 @@ const theme = createTheme(
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["fade"]} bgColor="primary" className={maxSlideStyle}>
+      <Deck transitionDuration={500} theme={theme}>
+        <Slide bgColor="primary" className={maxSlideStyle}>
           <IntroductionSlide />
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+          <DataVisualisationSlide />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>

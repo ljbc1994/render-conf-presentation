@@ -7,7 +7,10 @@ const imagesToShow = [
   require("../../assets/conference-pics/2.png"),
   require("../../assets/conference-pics/3.png"),
   require("../../assets/conference-pics/4.png"),
-  require("../../assets/conference-pics/5.png")
+  require("../../assets/conference-pics/5.png"),
+  require("../../assets/conference-pics/6.png"),
+  require("../../assets/conference-pics/7.png"),
+  require("../../assets/conference-pics/8.png")
 ];
 
 export default () => {
@@ -18,7 +21,7 @@ export default () => {
         Render Conf 2018
       </Heading>
       <Text size={5} textColor="tertiary">
-        Standard text
+        Oxford
       </Text>
     </React.Fragment>
   );
