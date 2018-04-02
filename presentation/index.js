@@ -11,6 +11,7 @@ import {
   List,
   Quote,
   Slide,
+  SlideSet,
   Text
 } from "spectacle";
 import { maxSlideStyle } from "./config/slide-styles";
@@ -20,7 +21,7 @@ import createTheme from "spectacle/lib/themes/default";
 import presentationTheme from "./config/theme";
 
 // Import Slides
-import { IntroductionSlide, DataVisualisationSlide } from "./slides";
+import { IntroductionSlide, DataVisualisationSlide, AccessibilitySlides } from "./slides";
 
 // Require CSS
 require("normalize.css");
@@ -40,6 +41,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary">
           <DataVisualisationSlide />
         </Slide>
+        <SlideSet>{AccessibilitySlides}</SlideSet>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
           <List>
