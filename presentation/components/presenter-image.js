@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "spectacle";
 import PropTypes from "prop-types";
-import { css } from "react-emotion";
+import styled, { css } from "react-emotion";
 
 const styles = css`
   position: relative;
@@ -12,18 +12,22 @@ const styles = css`
   overflow: hidden;
 `;
 
-const imageStyles = css`
+const ImageBackground = styled("div")`
+  background-image: url('${(props) => props.src}');
+  background-position: center center;
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
 `;
 
 const PresenterImage = ({ src }) => {
   return (
     <div className={styles}>
-      <Image className={imageStyles} src={src} />
+      <ImageBackground src={src} />
     </div>
   );
 };
