@@ -1,36 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "react-emotion";
-import ImageSlide from "./image-slide";
-
-const slideStyle = css`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  flex: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-`;
+import { Slide } from "spectacle";
 
 class ImageSlider extends React.Component {
   static propTypes = {
+    children: PropTypes.children,
     duration: PropTypes.number,
     images: PropTypes.arrayOf(PropTypes.string)
-  }
+  };
 
   static defaultProps = {
     duration: 3500
-  }
+  };
 
   state = {
     images: [],
     currentIndex: 0
-  }
+  };
 
   componentWillReceiveProps(newProps) {
     this.setState({
@@ -57,11 +43,7 @@ class ImageSlider extends React.Component {
   render() {
     const imageUrl = this.state.images[this.state.currentIndex];
 
-    return (
-      <div className={slideStyle}>
-        <ImageSlide src={ imageUrl }/>
-      </div>
-    );
+    return <Slide bgImage={imageUrl} bgDarken={0.5}>{this.props.children}</Slide>;
   }
 }
 
