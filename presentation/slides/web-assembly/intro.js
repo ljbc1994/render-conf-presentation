@@ -5,15 +5,15 @@ import PresenterImage from "../../components/presenter-image";
 export default () => {
   return (
     <React.Fragment>
-      <PresenterImage src={require("../../../assets/conference-speakers-pics/nadieh-bremer.jpg")}/>
+      <PresenterImage src={require("../../../assets/conference-speakers-pics/benedek-gagyi.jpg")}/>
       <Heading size={5} textColor="secondary" margin={20}>
-        Data Sketches
+        WebAssembly as cross-platform architecture?!
       </Heading>
       <Text size={6} textColor="primary" margin={20}>
-        Nadieh Bremer
+        Benedek Gagyi
       </Text>
       <Text textSize={20} textColor="primary" margin={20}>
-        Data Visualization Designer, Visual Cinnamon
+        Senior Software Engineer - join.me by LogMeIn
       </Text>
     </React.Fragment>
   );
