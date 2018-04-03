@@ -1,4 +1,5 @@
 import IntroductionSlides from "./introduction";
+import AboutSlides from "./about";
 import DataVisualisationSlides from "./data-visualisation";
 import AccessibilitySlides from "./accessibility";
 import IoTSlides from "./iot";
@@ -14,6 +15,7 @@ import CSSCarol from "./css-carol";
 
 export {
   IntroductionSlides,
+  AboutSlides,
   DataVisualisationSlides,
   AccessibilitySlides,
   IoTSlides,

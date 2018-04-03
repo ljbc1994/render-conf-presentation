@@ -11,6 +11,7 @@ import presentationTheme from "./config/theme";
 // Import Slides
 import { 
   IntroductionSlides,
+  AboutSlides,
   DataVisualisationSlides,
   AccessibilitySlides,
   IoTSlides,
@@ -38,6 +39,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transitionDuration={500} theme={theme}>
         <SlideSet>{IntroductionSlides}</SlideSet>
+        <SlideSet>{AboutSlides}</SlideSet>
         <SlideSet>{DataVisualisationSlides}</SlideSet>
         <SlideSet>{AccessibilitySlides}</SlideSet>
         <SlideSet>{IoTSlides}</SlideSet>
