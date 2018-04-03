@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "spectacle";
+import { Heading, Text } from "spectacle";
 import PresenterImage from "../../components/presenter-image";
 
 export default () => (
@@ -8,8 +8,11 @@ export default () => (
     <Heading size={5} textColor="secondary" margin={20}>
       Common ways we break accessibility and how to avoid them
     </Heading>
-    <Heading size={6} textColor="primary" margin={20}>
+    <Text size={6} textColor="primary" margin={20}>
       Laura Carvajal
-    </Heading>
+    </Text>
+    <Text textSize={20} textColor="primary" margin={20}>
+      Senior Developer - Financial Times
+    </Text>
   </React.Fragment>
 );
